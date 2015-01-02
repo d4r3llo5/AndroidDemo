@@ -1,0 +1,21 @@
+<!-- part two of tutorial, adding menu action bar -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:backcompat="http://schemas.android.com/apk/res-auto" >
+	<!-- This is for backwards compatability for Android down to 2.1 -->
+	<!--
+		Search bar (always show to the user)
+		 once again, notice id has a '@+id',
+		 signifying creation, new icon type
+		 Never show the settings menu
+
+		 You need to go to their site download the images
+		 and add them to the root path in the drawable/ dir
+	-->
+	<item android:id="@+id/action_search"
+		android:icon="@drawable/ic_action_search"
+		android:title="@string/action_search"
+		backcompat:showAsAction="ifRoom"  /> <!-- Note the use of a different xmlns -->
+	<item android:id="@+id/action_settings"
+		android:title="@string/action_settings"
+		backcompat:showAsAction="never" />
+</menu>

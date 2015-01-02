@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	tools:context=".MainActivity">
+
+	<!--
+		Default (also used RelativeLayout), this adds a hello world text box that wrapped
+		around the screen
+		<TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	-->
+	<!-- Added by the demo code -->
+	<!--
+		create an editable text field, id is a resource type (like string)
+		The '@' defines an XML resource that we're using followed by the resource value
+		The plus sign is needed in XML to show we're creating this resource for the first time
+		The resource name is after the slash, titled: 'edit_message'
+	-->
+	<EditText
+		android:id="@+id/edit_message"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:hint="@string/edit_message" />
+
+	<!--
+		** Some more low level caveats **
+
+		hints: Will throw an error on first completion, since the string variable has
+		not been defined yet (edit_message).
+		This is allowed since the resource type is not similar (id vs string).
+
+		Strings are stored (by default), here
+		res/values/strings.xml
+		(this is done so it is easier to edit the UI strings)
+
+		The SDK will use the ID to create a resource ID in the gen/R.java file
+		which will link to the EditText element, giving the user the ability to access the
+		edit message variable (in the same fashion as above)
+	-->
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/button_send"
+		android:onClick="sendMessage" />
+	<!--
+		Not sure how the onclick gets linked to the right thing yet.
+		Maybe it knows to look in the activities dir?
+	-->
+</LinearLayout>
