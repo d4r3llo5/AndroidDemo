@@ -86,4 +86,13 @@ public class MainActivity extends ActionBarActivity {
 		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity(intent);
 	}
+
+	/*
+		Added by myself to try and create a sandbox activity (as of 1/1/2015)
+			May have to create more in the future
+	 */
+	public void gotoSandbox(View view) {
+		Intent intent = new Intent(this, SandBox.class);
+		startActivity(intent);
+	}
 }

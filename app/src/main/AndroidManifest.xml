@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demoapp.test.demoapplication" >
-	<uses-sdk android:minSdkVersion="8" />
+
+    <uses-sdk android:minSdkVersion="8" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,10 +24,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.demoapp.test.demoapplication.MainActivity" />
         </activity>
-		<!-- Things to note from the created activity (and the main one)
+        <!--
+             Things to note from the created activity (and the main one)
 			parentActivityName: Refers to how the back button handles
 			meta-data: support for those poor saps not on android 4.0 or greater
-		-->
+        -->
+        <activity
+            android:name=".SandBox"
+            android:label="@string/title_activity_sand_box"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.demoapp.test.demoapplication.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

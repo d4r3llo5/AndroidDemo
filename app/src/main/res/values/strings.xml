@@ -4,17 +4,27 @@
     <string name="app_name">Demo Application</string>
 
     <!-- Added by tutorial code -->
-	<!-- Title for the main activity Activity resource -->
-	<string name="title_activity_main">MainActivity</string>
-	<!-- Strings for the MainActivity View -->
+    <!-- Title for the main activity Activity resource -->
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings for the MainActivity View -->
     <string name="edit_message">Enter a message, punk</string>
     <string name="button_send">Send</string>
     <string name="hello_world">Hello world!</string>
 
-	<!-- Title for the DisplayMessageAction Activity resource -->
-	<string name="title_activity_display_message">My message</string>
+	<!-- String for the button to go to the sandbox -->
+	<string name="button_to_sandbox">To Sandbox!</string>
 
-	<!-- Top action bar items -->
-	<string name="action_search">Search</string>
-	<string name="action_settings">Settings</string>
+    <!-- Title for the DisplayMessageAction Activity resource -->
+    <string name="title_activity_display_message">My message</string>
+
+    <!-- Top action bar items -->
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+
+	<!-- Sandbox -->
+    <string name="title_activity_sand_box">SandBox</string>
+	<string name="button_sandbox">Clickity Click</string>
+	<string name="sandbox_text">Hello nerds!</string>
+	<string name="sandbox_entered">Waiting for the click</string>
+
 </resources>

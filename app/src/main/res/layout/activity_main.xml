@@ -6,6 +6,8 @@
 	android:paddingLeft="@dimen/activity_horizontal_margin"
 	android:paddingRight="@dimen/activity_horizontal_margin"
 	android:paddingTop="@dimen/activity_vertical_margin"
+
+	android:orientation="vertical"
 	tools:context=".MainActivity">
 
 	<!--
@@ -21,35 +23,52 @@
 		The plus sign is needed in XML to show we're creating this resource for the first time
 		The resource name is after the slash, titled: 'edit_message'
 	-->
-	<EditText
-		android:id="@+id/edit_message"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_weight="1"
-		android:hint="@string/edit_message" />
+	<LinearLayout
+		android:layout_width="wrap_content" android:layout_height="wrap_content" >
+		<EditText
+			android:id="@+id/edit_message"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="vertical"
+			android:hint="@string/edit_message" />
 
-	<!--
-		** Some more low level caveats **
+		<!--
+			** Some more low level caveats **
 
-		hints: Will throw an error on first completion, since the string variable has
-		not been defined yet (edit_message).
-		This is allowed since the resource type is not similar (id vs string).
+			hints: Will throw an error on first completion, since the string variable has
+			not been defined yet (edit_message).
+			This is allowed since the resource type is not similar (id vs string).
 
-		Strings are stored (by default), here
-		res/values/strings.xml
-		(this is done so it is easier to edit the UI strings)
+			Strings are stored (by default), here
+			res/values/strings.xml
+			(this is done so it is easier to edit the UI strings)
 
-		The SDK will use the ID to create a resource ID in the gen/R.java file
-		which will link to the EditText element, giving the user the ability to access the
-		edit message variable (in the same fashion as above)
-	-->
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/button_send"
-		android:onClick="sendMessage" />
+			The SDK will use the ID to create a resource ID in the gen/R.java file
+			which will link to the EditText element, giving the user the ability to access the
+			edit message variable (in the same fashion as above)
+		-->
+		<Button
+			android:id="@+id/main_submit"
+			android:layout_weight="0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/button_send"
+			android:onClick="sendMessage" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:orientation="vertical" >
 	<!--
 		Not sure how the onclick gets linked to the right thing yet.
 		Maybe it knows to look in the activities dir?
 	-->
+	<!-- Added for sandbox testing of another Activity -->
+		<Button
+			android:id="@+id/main_sandbox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/button_to_sandbox"
+			android:onClick="gotoSandbox" />
+	</LinearLayout>
 </LinearLayout>
