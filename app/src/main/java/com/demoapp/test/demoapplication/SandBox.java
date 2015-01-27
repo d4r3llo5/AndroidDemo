@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+/*-- User created Activity --*/
 public class SandBox extends ActionBarActivity {
 
 	@Override
